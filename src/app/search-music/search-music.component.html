@@ -1,0 +1,30 @@
+<form (ngSubmit)="searchMusic()">
+      <div class="control has-icons-left is-expanded">
+        <input type="text" class="form-control" name="searchStr" [(ngModel)]="searchStr" placeholder="Search Music">
+        <span class="icon is-small is-left"><i class="fab fa-lastfm"></i></span>
+      </div>
+      <div class="control"><button class="btn btn-primary btn-block">Search</button></div>
+      <div class="control"><a class="btn btn-outline-success btn-block" (click)="reset()">Reset</a></div>
+    
+  </form><br>
+
+
+  <table class="table table-striped" *ngIf="searchResult">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Artist</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let track of tracks; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td><img src="{{track.image}}" alt=""></td>
+        <td><a href="{{track.url}}">{{ track.name }}</a></td>
+        <td>{{track.artist}}</td>
+      </tr>
+      
+    </tbody>
+  </table>

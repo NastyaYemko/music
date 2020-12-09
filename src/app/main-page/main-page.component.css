@@ -1,0 +1,17 @@
+img{
+    size: small;
+}
+th, td{
+    text-align: center;
+}
+table{
+    width: 70%;
+    margin: 20px auto ;
+}
+a,table{
+    color: midnightblue;
+}
+h3{
+    text-align: center;
+    color: purple;
+}

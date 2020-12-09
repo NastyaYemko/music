@@ -1,0 +1,10 @@
+.route{
+    width: 10%;
+    margin: 20px auto;
+}
+.btn-secondary{
+    background-color: purple;
+}
+a{
+    color: whitesmoke;
+}

@@ -1,0 +1,23 @@
+
+<h3>Top 5 songs of the LastFM</h3>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Artist</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let track of tracks; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td><img src="{{track.image}}" alt=""></td>
+        <td><a href="{{track.url}}">{{ track.name }}</a></td>
+        <td>{{track.artist}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
